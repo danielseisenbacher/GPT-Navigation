@@ -1,0 +1,55 @@
+/* -------------------------------------------------------------------------- */
+/* SEARCH BAR */
+#search-bar {
+    height: 100px;
+    width: 100%;
+    display: flex; /* Enable Flexbox */
+    align-items: flex-end; /* Align children at the bottom */
+}
+
+.input-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; /* Ensures space is given between the textarea and button */
+}
+
+/* Style for the textarea */
+.input-form textarea {
+    flex: 1; /* Makes the textarea take up remaining space */
+    min-height: 40px;
+    max-height: 80px;
+    resize: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px; /* Small gap between the textarea and button */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+/* Style for the submit button */
+#submit-button {
+    width: 38px; /* Width of the button */
+    height: 38px; /* Height of the button */
+    padding: 0 0 4px 0; /* Remove default padding */
+    border: none; /* Remove default border */
+    background: transparent; /* Ensures no background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the submit button image */
+#submit-button .submit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the image fits within the button without stretching */
+}
+
+/* Avoid inheritance of styles from the slider */
+#submit-button img {
+    position: static; /* Prevent the image from inheriting the absolute positioning from the slider */
+    transform: none; /* Remove any transform or rotation from the slider button */
+}

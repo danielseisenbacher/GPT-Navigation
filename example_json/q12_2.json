@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [16.4160752, 48.1747466]}, "properties": {"name": "Lucky Star", "price_level": 1, "rating": 4.4, "number_of_ratings": 349, "address": "Simmeringer Hauptstra\u00dfe 105, Wien"}}]}

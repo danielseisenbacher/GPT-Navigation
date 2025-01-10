@@ -1,0 +1,57 @@
+/* -------------------------------------------------------------------------- */
+/* CHAT */
+
+#chat {
+    height: 400px;
+    width: 100%;
+    overflow-y: auto; /* Enables vertical scrolling when content overflows */
+    max-height: 400px; /* Ensures the height doesn't expand beyond 400px */
+}
+
+#myTable {
+    width: 100%;
+    border-spacing: 0 4px; /* Set 4px space between rows */
+}
+
+#myTable td {
+    padding: 0; /* Remove padding in table cells */
+    margin: 0;  /* Remove margin in table cells */
+}
+
+.left-column,
+.right-column {
+    width: 50%;
+    height: auto;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    vertical-align: top; /* Ensures textareas align to the top of the cell */
+}
+
+.left-column textarea{
+    width: auto;
+    height: auto;
+    border-radius: 0 20px 20px 20px;
+    border: 1px solid #ccc;
+}
+
+.right-column {
+    text-align: right; /* Align content to the right side of the cell */
+}
+
+.right-column textarea {
+    border-radius: 20px 0 20px 20px;
+    border: 1px solid #ccc;
+}
+
+#myTable textarea {
+    width: 100%;
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 10px;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    margin-top: 10px;
+    box-sizing: border-box; /* Includes padding in height/width */
+    overflow: hidden; /* Prevent scrollbars inside textarea */
+}
+
