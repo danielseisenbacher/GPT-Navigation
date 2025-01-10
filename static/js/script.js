@@ -158,7 +158,7 @@ async function use_example_jsons(inputText) {
     
     if (number) {
         const fileName = `q${number}.json`;  // Example: q1.json
-        const filePath = `/example_json/${fileName}`;
+        const filePath = `example_json/${fileName}`;
 
         try {
             const response = await fetch(filePath);
