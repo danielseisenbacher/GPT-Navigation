@@ -137,9 +137,8 @@ async function input_logic(event) {
             }
         }
         else {
-            // TODO: insert the logic of the other groups
-            // something like this:
-            // const json_answer = await GPT_Magic(inputText);
+            // call python-anywhere
+            const json_answer = await callPythonScript(inputText);
 
             if (json_answer) {
                 user_answer = await interpret_json_answer(json_answer);
@@ -148,6 +147,18 @@ async function input_logic(event) {
         
         // write the answert that is supposed to go to the user
         addRow(user_answer, response=true);
+    }
+}
+
+async function callPythonScript(param) {
+    try {
+        const response = await fetch(`https://danielseisenbacher.pythonanywhere.com/run-script?param=${encodeURIComponent(param)}`);
+        const data = await response.json();
+        console.log(data.result); // Output the result from the Python script
+        return data.result;
+    } catch (error) {
+        console.error('Error calling Python script:', error);
+        return "Error!";
     }
 }
 
