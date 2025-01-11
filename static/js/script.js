@@ -152,6 +152,7 @@ async function input_logic(event) {
 
 async function callPythonScript(param) {
     try {
+        console.log(`https://danielseisenbacher.pythonanywhere.com/run-script?param=${encodeURIComponent(param)}`)
         const response = await fetch(`https://danielseisenbacher.pythonanywhere.com/run-script?param=${encodeURIComponent(param)}`);
         const data = await response.json();
         console.log(data.result); // Output the result from the Python script
