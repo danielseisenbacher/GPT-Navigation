@@ -155,8 +155,8 @@ async function callPythonScript(param) {
         console.log(`https://danielseisenbacher.pythonanywhere.com/run-script?param=${encodeURIComponent(param)}`)
         const response = await fetch(`https://danielseisenbacher.pythonanywhere.com/run-script?param=${encodeURIComponent(param)}`);
         const data = await response.json();
-        console.log(data.result); // Output the result from the Python script
-        return data.result;
+        console.log(data); // Output the result from the Python script
+        return data;
     } catch (error) {
         console.error('Error calling Python script:', error);
         return "Error!";
